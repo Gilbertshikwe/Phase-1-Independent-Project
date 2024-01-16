@@ -1,5 +1,5 @@
 nav {
-    background-color: #087a0896;
+    background: #1974be;
     padding: 30px;
     text-align: center;
 }
@@ -21,7 +21,7 @@ body {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    margin: 0;
    padding: 0;
-   background: linear-gradient(45deg, #1e5799, #7db9e8);
+   background: rgba(21, 141, 47, 0.26);
 }
 #dictionary-container {
    text-align: center;
