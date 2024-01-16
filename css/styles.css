@@ -1,0 +1,90 @@
+nav {
+    background-color: #087a0896;
+    padding: 30px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #111;
+    border-radius: 10px;
+}
+  
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(45deg, #1e5799, #7db9e8);
+}
+#dictionary-container {
+   text-align: center;
+   width: 80%;
+   max-width: 400px;
+   margin: 20px auto; /* Center the container horizontally */
+   padding: 20px;
+   border-radius: 12px;
+   background: linear-gradient(45deg, #ffffff, #f2f2f2);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   color: #333;
+}
+
+#search-input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+}
+
+#search-btn {
+    background-color: #087a0896;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+#search-btn:hover {
+    background-color:rgb(19, 94, 179);
+}
+
+#result {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#result h3 {
+    color: #333;
+}
+
+#result p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+section {
+    padding: 20px;
+    margin-top: 20px;
+    background: #1974be;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
