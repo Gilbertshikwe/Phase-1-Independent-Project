@@ -30,6 +30,27 @@ btn.addEventListener("click", (e) => {
     // Fetch data from the dictionary API based on the user input
     fetch(`${url}${input}`)
     .then(res => res.json())
-    .then(data => {console.log(data)
-    });
-})
+    .then(data => {
+    // Display the retrieved data in the result section of the page
+    result.innerHTML = `
+    <div class="word">
+    <h3>${input}</h3>
+    </div>
+    <div class="details">
+    <p>${data[0].meanings[0].partOfSpeech}</p>
+    <p>/${data[0].phonetic}/</p>
+    </div>
+    <p class="word-meaning">
+    ${data[0].meanings[0].definitions[0].definition}
+    </p>
+    <p class="word-example">
+    ${data[0].meanings[0].definitions[0].example || ""}
+    </p>
+    `
+    })
+    // Display an error message if the word is not found
+    .catch(() => {
+        result.innerHTML = `<h3 class="error">Sorry! couldn't find the word you are looking for</h3>`
+    })
+});
+
