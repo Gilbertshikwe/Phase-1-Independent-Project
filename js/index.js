@@ -89,5 +89,21 @@ function fetchComments() {
       })
       .catch(error => console.error('Error fetching comments:', error));
 }
+// Function to send a new comment to the database
+function postComment(comment) {
+  fetch('http://localhost:3000/comments', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ comment })
+  })
+      .then(response => response.json())
+      .then(data => {
+          displayComment(data.comment); // Display the new comment
+          document.getElementById('comment-input').value = ''; // Clear the input field
+      })
+      .catch(error => console.error('Error posting comment:', error));
+}
 
 
