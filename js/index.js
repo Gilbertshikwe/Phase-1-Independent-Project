@@ -62,7 +62,9 @@ e.preventDefault();
 const comment = document.getElementById('comment-input').value;
 
 // Display the comment in the comments list
-displayComment(comment);
+displayComment(comment)
+
+postComment(comment);;
 });
 // Function to display a new comment in the comments list
 function displayComment(comment) {
@@ -71,8 +73,21 @@ function displayComment(comment) {
   commentElement.textContent = comment;
   commentsList.appendChild(commentElement);
 
-  // Clear the input field after submitting the comment
+// Clear the input field after submitting the comment
 document.getElementById('comment-input').value = '';
+}
+// Function to fetch existing comments from the database
+function fetchComments() {
+  fetch('http://localhost:3000/comments')
+      .then(response => response.json())
+      .then(data => {
+          const commentsList = document.getElementById('comments-list');
+          commentsList.innerHTML = ''; // Clear existing comments
+          data.forEach(comment => {
+              displayComment(comment.comment);
+          });
+      })
+      .catch(error => console.error('Error fetching comments:', error));
 }
 
 
