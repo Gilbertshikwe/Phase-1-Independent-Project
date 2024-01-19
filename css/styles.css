@@ -127,3 +127,54 @@ img {
     background-attachment: fixed;
     background-color: #111;
 }
+#comments-section {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ffffff, #f2f2f2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+#comments-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comments-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+#comments-form input[type="submit"] {
+    background-color: #087a0896;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#comments-form input[type="submit"]:hover {
+    background-color:rgb(19, 94, 179);
+}
+
+#comments-list {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#comments-list p {
+    margin: 0 0 10px;
+}
