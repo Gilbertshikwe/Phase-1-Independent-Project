@@ -1,24 +1,20 @@
-// Event listener for when the DOM content is fully loaded, it calls the `makeLinksSmooth` function
-document.addEventListener("DOMContentLoaded", makeLinksSmooth)
-
-// Function to make navigation links smooth-scroll when clicked
-function makeLinksSmooth() { 
-    const navLinks = document.querySelectorAll("nav a"); 
+// Event listener for when the DOM content is fully loaded.
+document.addEventListener("DOMContentLoaded",() => {
+const navLinks = document.querySelectorAll("nav a"); 
   
-    navLinks.forEach((link) => {
-      link.addEventListener("click", smoothScroll);
-    });
-  }
-  function smoothScroll(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+navLinks.forEach((link) => {
+  link.addEventListener("click", smoothScroll);
+});
+function smoothScroll(e) {
+  e.preventDefault();
+  const targetId = this.getAttribute("href");
+  const targetElement = document.querySelector(targetId);
   
-    if (targetElement) { 
-      targetElement.scrollIntoView({ behavior: "smooth", });
-    }
+  if (targetElement) { 
+  targetElement.scrollIntoView({ behavior: "smooth", });
   }
- 
+}
+}) 
 // API endpoint for fetching dictionary data
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 const result = document.getElementById("result")
@@ -76,7 +72,8 @@ function displayComment(comment) {
 // Clear the input field after submitting the comment
 document.getElementById('comment-input').value = '';
 }
-// Function to fetch existing comments from the database
+
+ //Function to fetch existing comments from the database
 function fetchComments() {
   fetch('http://localhost:3000/comments')
       .then(response => response.json())
@@ -84,7 +81,7 @@ function fetchComments() {
           const commentsList = document.getElementById('comments-list');
           commentsList.innerHTML = ''; // Clear existing comments
           data.forEach(comment => {
-              displayComment(comment.comment);
+           displayComment(comment.comment);
           });
       })
       .catch(error => console.error('Error fetching comments:', error));
@@ -105,5 +102,6 @@ function postComment(comment) {
       })
       .catch(error => console.error('Error posting comment:', error));
 }
+
 
 

@@ -6,33 +6,37 @@
     <title>Dictionary App</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./assets/download.jpeg">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1 style="text-align: center;color: #0a3457c7">The Dictionary App</h1>
-      <nav>
-         <a href="#home">Home</a>
-         <a href="#about">About</a>
-         <a href="#comments-section">Comments</a>
-         <a href="#contacts">Contacts</a>
-      </nav>
-    <div id="dictionary-container">
-        <input type="text" id="search-input" placeholder="Enter a word">
-        <button id="search-btn">Search</button>
-        <div id="result">
-           <!--results will go here-->
+    <nav>
+       <a href="#search">Search</a>
+       <a href="#about">About</a>
+       <a href="#comments-section">Feedback</a>
+       <a href="#contacts">Contacts</a>
+    </nav>
+    <main>
+        <div class="dictionary-container" id="search">
+            <h1 style="text-align: center;color: #0a3457c7;">Dictionary</h1>
+            <input type="text" id="search-input" placeholder="Enter a word">
+            <button id="search-btn">Search</button>
+            <div id="result">
+               <!--results will go here-->
+            </div>
         </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <p>The Dictionary App is a simple and user-friendly web application that allows you to quickly search for word definitions. Powered by the Free dictionary API, it provides accurate and up-to-date information about the meanings of words. Whether you're a student, writer, or language enthusiast, the Dictionary App is here to assist you in expanding your vocabulary and understanding the nuances of language.</p>
+    
+        <div id="about">
+          <h2 style="text-align: center;color: #0a3457c7;">About</h2>
+          <p>The Dictionary App is a simple and user-friendly web application that allows you to quickly search for word definitions. Powered by the WordsAPI, it provides accurate and up-to-date information about the meanings of words. Whether you're a student, writer, or language enthusiast, the Dictionary App is here to assist you in expanding your vocabulary and understanding the nuances of language.</p>
         <p>Feel free to explore the app, search for words, and make the most out of the rich features it offers. If you have any feedback or suggestions, we'd love to hear from you!</p>
-    </section>
-
+        </div>
+      </main>
       <!-- Comments Section -->
       <section id="comments-section">
-        <h2>Comments</h2>
+        <h2>Feedback form</h2>
+        <p>We value your feedback! If you have any suggestions, comments, or issues related to the Dictionary App, please use the form below to let us know. Your input helps us improve our service.</p>
         <div id="comments-list">
             <!-- Display existing comments here if any -->
         </div>
@@ -41,15 +45,17 @@
             <input type="submit" value="Submit Comment">
         </form>
     </section>
-
-    <!-- Contacts Section -->
-    <section id="contacts">
-        <h2>Contacts</h2>
-        <p> Email us: shikweg@gmail.com or call us at +254733408821</p>
+    
+    <!-- Footer Section -->
+    <footer id="contacts">
+        
         <p>Contact us if you have any questions or feedback.</p>
-    </section>
-  
-
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <p><a href="mailto:shikweg@gmail.com">shikweg@gmail.com</a>   || Call us: 0733408821</p>
+        <p>&copy; The Dictionary App. All Rights Reserved.2023</p>
+    </footer>
 </body>
 <script src="./js/index.js"></script>
 </html>

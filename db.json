@@ -1,6 +1,52 @@
 {
-    "comments": [
-      { "id": 1, "comment": "This is the first comment." },
-      { "id": 2, "comment": "Another comment here." }
-    ]
-  }
+  "comments": [
+    {
+      "id": 1,
+      "comment": "This is the first comment."
+    },
+    {
+      "id": 2,
+      "comment": "Another comment here."
+    },
+    {
+      "comment": "Great!",
+      "id": 3
+    },
+    {
+      "comment": "Amazing stuff we have over here!",
+      "id": 4
+    },
+    {
+      "comment": "yuppy!",
+      "id": 5
+    },
+    {
+      "comment": "Great",
+      "id": 6
+    },
+    {
+      "comment": "Good job",
+      "id": 7
+    },
+    {
+      "comment": "Good boy",
+      "id": 8
+    },
+    {
+      "comment": "Great work",
+      "id": 9
+    },
+    {
+      "comment": "Iko sawa kabisa.",
+      "id": 10
+    },
+    {
+      "comment": "Umejaribu sana.",
+      "id": 11
+    },
+    {
+      "comment": "Thanks for the App.",
+      "id": 12
+    }
+  ]
+}
