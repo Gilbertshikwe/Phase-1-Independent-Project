@@ -102,6 +102,14 @@ function postComment(comment) {
       })
       .catch(error => console.error('Error posting comment:', error));
 }
+//Modal sign up form
+let modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
