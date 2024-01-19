@@ -54,3 +54,25 @@ btn.addEventListener("click", (e) => {
     })
 });
 
+// Add a listener for the comments form submission
+document.getElementById('comments-form').addEventListener('submit', function (e) {
+e.preventDefault();
+
+// Get the user's comment
+const comment = document.getElementById('comment-input').value;
+
+// Display the comment in the comments list
+displayComment(comment);
+});
+// Function to display a new comment in the comments list
+function displayComment(comment) {
+  const commentsList = document.getElementById('comments-list');
+  const commentElement = document.createElement('p');
+  commentElement.textContent = comment;
+  commentsList.appendChild(commentElement);
+
+  // Clear the input field after submitting the comment
+document.getElementById('comment-input').value = '';
+}
+
+
